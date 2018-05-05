@@ -1,0 +1,17 @@
+@charset "utf-8";
+*{
+	outline: none;
+}
+.header nav ul li a{
+ font-size: 20px;
+}
+.header nav .brand-logo{
+font-size: 26px;
+}
+
+.header .dropdown-content li a{
+	color: black;
+}
+nav{
+	background-color:#546e7a;
+}

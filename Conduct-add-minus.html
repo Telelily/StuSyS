@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>操行分统计</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+	<link rel="stylesheet" href="css/base.css">
+	<style type="text/css">
+		.body form a{
+			background-color:#546e7a;
+			margin-left: 90%;
+		}
+		 
+	</style>
+</head>
+<body>
+
+ <div class="container">
+ 	<div class="row header">
+ 		<div class="col s12 m12 l12">
+ 			 <h4>广东海洋大学学生会互助平台</h4>
+ 			 <ul id="cxfdropdown" class="dropdown-content">
+ 			 	<li><a href="#!">操行分管理</a></li>
+ 			 	<li><a href="#!">操作记录</a></li>
+ 			 	<li><a href="#!">重置操行分</a></li>
+ 			 </ul>
+ 			<nav>
+ 				<div class="nav-wrapper">
+ 					<a href="#!" class="brand-logo">&nbsp&nbsp首页</a>
+ 					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+ 					<ul class="right hide-on-med-and-down">
+ 						<li><a href="#">天线</a></li>
+ 						<li><a href="#">天线</a></li>
+ 						<li><a href="#" class="dropdown-trigger" href="#" data-target="cxfdropdown">操行分统计<i class="material-icons right">arrow_drop_down</i></a></li>
+ 						<li><a href="#">天线</a></li>
+ 					</ul>
+ 				</div>
+ 			</nav>
+
+ 			<ul class="sidenav" id="mobile-demo">
+ 				<li><a href="#">天线</a></li>
+ 				<li><a href="#">天线</a></li>
+ 				<li><a href="#!">操行分管理</a></li>
+ 				<li><a href="#!">操作记录</a></li>
+ 				<li><a href="#!">重置操行分</a></li>
+ 				
+ 				<li><a href="#">天线</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+   <div class="row body">
+    	<div class="col s12 m12 l12">
+    		<form>
+    			<div class="card-panel">
+    				<div class="row">
+    					<div class="input-field col s6 m6">
+    						<select class="browser-default">
+    							 <option value="" disabled selected>学年</option>
+    							<option value="1">2017</option>
+    							<option value="2">2018</option>
+    						</select>
+    					</div>
+    					
+    					<div class="input-field col s6 m6">
+    						<select class="browser-default">
+    							<option value="" disabled selected>学期</option>
+    							<option value="1">1</option>
+    							<option value="2">2</option>
+    						</select>
+    					</div>
+    					<div class="input-field col s6 m6">
+    						<select class="browser-default">
+    							 <option value="" disabled selected>分数类型</option>
+    							<option value="1">思想道德分</option>
+    							<option value="2">科技创新分</option>
+    							<option value="2">技术技能分</option>
+    							<option value="2">组织管理分</option>
+    							<option value="2">特殊加分</option>
+    						</select>
+    					</div>
+    					<div class="input-field col s6 m6">
+    						<select class="browser-default">
+    							<option value="" disabled selected>加分项目</option>
+    							<option value="1">1</option>
+    							<option value="2">2</option>
+    						</select>
+    					</div>
+    					<div class="input-field col s6 m6">
+    						<i class="material-icons prefix">mode_edit</i>
+    						<textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+    						<label for="icon_prefix2">备注</label>
+    					</div>
+    					<div class="input-field col s6">
+    						<input id="last_name" type="text" class="validate">
+    						<label for="last_name">分值</label>
+    					</div>
+    				</div>
+    				<a class="waves-effect waves-light btn-small">确定</a>
+    			</div>
+    		</form>
+    	</div>
+    </div>
+        					
+ </div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/Conduct statistics.js"></script>
+</body>
+</html>

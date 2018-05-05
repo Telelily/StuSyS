@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学生信息管理</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+	<link rel="stylesheet" href="css/base.css">
+	<style type="text/css">
+	.annius a{
+		background-color:#546e7a;
+		float: right;
+		margin-left: 10px;
+	}
+    .zdannius a{
+        background-color:#546e7a;
+        margin-left: 4px;
+    }
+    #ztable thead label span{
+      color: black;
+    }
+	.foot{
+		text-align: center;
+	}
+	.foot ul li.active a{
+		background-color: #546e7a;
+	}
+
+	</style>
+</head>
+<body>
+
+ <div class="container">
+ 	<div class="row header">
+ 		<div class="col s12 m12 l12">
+ 			 <h4>广东海洋大学学生会互助平台</h4>
+ 			 <ul id="cxfdropdown" class="dropdown-content">
+ 			 	<li><a href="#!">操行分管理</a></li>
+ 			 	<li><a href="#!">操作记录</a></li>
+ 			 	<li><a href="#!">重置操行分</a></li>
+ 			 </ul>
+ 			<nav>
+ 				<div class="nav-wrapper">
+ 					<a href="#!" class="brand-logo">&nbsp&nbsp首页</a>
+ 					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+ 					<ul class="right hide-on-med-and-down">
+ 						<li><a href="#">天线</a></li>
+ 						<li><a href="#">天线</a></li>
+ 						<li><a href="#" class="dropdown-trigger" href="#" data-target="cxfdropdown">操行分统计<i class="material-icons right">arrow_drop_down</i></a></li>
+ 						<li><a href="#">天线</a></li>
+ 					</ul>
+ 				</div>
+ 			</nav>
+
+ 			<ul class="sidenav" id="mobile-demo">
+ 				<li><a href="#">天线</a></li>
+ 				<li><a href="#">天线</a></li>
+ 				<li><a href="#!">学生信息管理</a></li>
+ 				<li><a href="#!">操作记录</a></li>
+ 				<li><a href="#!">重置操行分</a></li>
+ 				
+ 				<li><a href="#">天线</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+    <div class="row body">
+    	<div class="col s12 m12 l12">
+    		<div class="card-panel">
+    		<form action="#">
+    			<table class="responsive-table highlight" id="table">
+    				<div class="row">
+    				<div class="input-field col s3 m3">
+    					<i class="material-icons prefix">search</i>
+    					<input id="icon_prefix" type="text" class="validate">
+    					<label for="icon_prefix">查询</label>
+    				</div>
+    				<div class="input-field col s2 m1">
+    					<select class="browser-default">
+    						<option value="1">班级</option>
+    						<option value="2">学号</option>
+    					</select>
+    				</div>
+    				<div class="input-field annius col s12 m8"">
+    					<a class="waves-effect waves-light btn">删除</a>
+    					<a class="waves-effect waves-light btn">添加</a>
+    					<a class="waves-effect waves-light btn">导出</a>
+    					<a class="waves-effect waves-light btn">导入</a>
+    					
+    				</div>
+    				</div>
+    				<thead>
+    					<tr>
+    						<th>
+    							<label>
+    								<input type="checkbox" />
+    								<span class="checkall">全选</span>
+    							</label>
+    						</th>
+    						<th>学院</th>
+    						<th>班级</th>
+    						<th>学号</th>
+    						<th>姓名</th>
+    						<th>操作</th>
+    					</tr>
+    				</thead>
+
+    				<tbody>
+
+    				</tbody>
+    			</table>
+    		</form>
+    	</div>
+        <!-- 测试字段 -->
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large   blue-grey darken-4">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul id="editbtn">
+            <li><a class="btn-floating red modal-trigger tooltipped" href="#modal1" data-position="left" data-tooltip="添加字段"><i class="material-icons">add</i></a></li>
+           <!--  <li><a class="btn-floating orange darken-4 modal-trigger tooltipped" href="#modal2" data-position="left" data-tooltip="删除字段"><i class="material-icons">remove</i></a></li>
+            <li><a class="btn-floating green modal-trigger tooltipped"  data-position="left" data-tooltip="更新字段"><i class="material-icons">refresh</i></a></li> -->
+         <!--    <li><a class="btn-floating deep-purple darken-1modal-trigger tooltipped " data-position="left" data-tooltip="搜索字段"><i class="material-icons">search</i></a></li> -->
+            <li id="showall"><a class="btn-floating light-blue darken-3 modal-trigger tooltipped" href="#modal3" data-position="left" data-tooltip="全部字段"><i class="material-icons">folder_open</i></a></li>
+        </ul>
+        <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4>添加字段</h4>
+                  <div class="row">
+                    <div class="col s12">
+                        请输入字段:
+                      <div class="input-field inline">
+                        <input type="text" id="addzd" class="validate">
+                        <label></label>
+                    </div>
+                     <div>
+                       <label>
+                        <input name="group1" type="radio" checked value="true" />
+                        <span>必选</span>
+                        </label>
+                    <label>
+                        <input name="group1" type="radio" value="false" />
+                        <span>非必选</span>
+                    </label>
+                   </div>
+                </div>
+            </div>
+              </div>
+              <div class="modal-footer">
+                  <a href="#!" id="AddSure" class="modal-action modal-close waves-effect waves-green btn-flat">确定</a>
+              </div>
+          </div>
+          <div id="modal3" class="modal">
+                <div class="modal-content">
+                  <h4>全部字段</h4>
+                  <div class="row">
+                    <div class="col s12">
+                       <form action="#" >
+                <table class="responsive-table highlight" id="ztable">
+                    <div class="row">
+                    <div class="input-field zdannius col s12 m8"">
+                        <a class="waves-effect waves-light btn" id="deletezd">删除</a>
+                        <a class="waves-effect waves-light btn" id="editzd">编辑</a>
+                    </div>
+                    </div>
+                </table>
+            </form>
+                </div>
+            </div>
+              </div>
+              <div class="modal-footer">
+                  <a href="#!" id="surezd" class="modal-action modal-close waves-effect waves-green btn-flat">确定</a>
+              </div>
+          </div>
+         
+    </div>
+    	</div>
+    </div>
+    <div class="row foot">
+    	<ul class="pagination">
+    		<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    		<li class="active"><a href="#!">1</a></li>
+    		<li class="waves-effect"><a href="#!">2</a></li>
+    		<li class="waves-effect"><a href="#!">3</a></li>
+    		<li class="waves-effect"><a href="#!">4</a></li>
+    		<li class="waves-effect"><a href="#!">5</a></li>
+    		<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    	</ul>
+    </div>
+ </div>
+
+    
+     
+    
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/Student-message.js"></script>
+</body>
+</html>

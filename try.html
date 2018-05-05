@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+body {
+font-size: 12px;
+}
+
+
+td {
+border-width: 1px;
+border-top-style: solid;
+border-right-style: none;
+border-bottom-style: none;
+border-left-style: solid;
+text-align: center;
+width: 25%;
+height: 20px;
+}
+table {
+border-width: 1px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-top-style: none;
+border-left-style: none;
+border-color: #000;
+}
+.text {
+width: 95%;
+border: 1px dashed #FF9900;
+}
+</style>
+</head>
+<body>
+
+<table width="50%" border="0" align="center" cellpadding="0"
+cellspacing="0">
+<tr>
+<td>dblclick</td>
+<td>eqweqwe</td>
+<td>qeqe</td>
+<td>ewqeq</td>
+</tr>
+</table>
+
+
+<script language="javascript">
+/*  
+修改的id值和单元格的值，可转成json串
+用ajax提交数据到后台，后台解析json，更新数据库
+*/
+// 将单元格转化成文本框 
+function changeTotext(obj) {
+//获取标签内的文本值
+var tdValue = obj.innerText;
+obj.innerText = "";
+//创建input标签对象
+var txt = document.createElement("input");
+txt.type = "text";
+//将文本值赋给input的value
+txt.value = tdValue;
+//新建input的id值(可以用数据库的ID值)
+txt.id = "_text_000000000_";
+//添加input节点，并放到td中
+obj.appendChild(txt);
+//选取域中的文本（双击时文本全选）
+txt.select();
+//双击之后改变样式
+//单元格边框样式
+obj.style.border = "1px dashed #ff9900"; 
+//input标签边框
+txt.style.border = "0px";
+txt.style.outline = "none";
+obj.style.border = ""; 
+}
+// 取消单元格中的文本框，并将文本框中的值赋给单元格 
+function cancel(obj) {
+var txtValue = document.getElementById("_text_000000000_").value;
+//更改之后的值
+obj.innerText = txtValue;
+
+}
+
+/*********************************************/
+// 事件 
+document.ondblclick = function() {
+//取得标签属性
+if (event.srcElement.tagName.toLowerCase() == "td") {
+//获得触发事件的元素
+//对象
+changeTotext(event.srcElement);
+}
+}
+//当鼠标抬起执行
+document.onmouseup = function() {
+if (document.getElementById("_text_000000000_")
+&& event.srcElement.id != "_text_000000000_") {
+var obj = document.getElementById("_text_000000000_").parentElement;
+cancel(obj);
+}
+}
+</script>
+</head>
+
+
+
+
+
+
+</body>
+</html>
