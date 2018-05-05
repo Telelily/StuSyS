@@ -76,6 +76,7 @@ $('#deletezd').click(function () {
 /*删除全部字段*/
 
 /*更新字段*/
+
 $('#editzd').click(function(){
 
    function ShowElement(element) {
@@ -83,7 +84,6 @@ $('#editzd').click(function(){
             var newobj = document.createElement('input');
             newobj.type = 'text';
             newobj.value = oldhtml;
-            newobj.id = "textid";
             newobj.onblur = function() {
                 element.innerHTML = this.value == oldhtml ? oldhtml : this.value;
             }
@@ -94,17 +94,26 @@ $('#editzd').click(function(){
         }
      
 var checkbox = document.getElementsByName("che");  
-var span=$(".sp");
+var span=$(".sp");  
 var id=""; 
+var xzd ="";
 for ( var i = 0; i < checkbox.length; i++) {  
            if(checkbox[i].checked){ 
            id = id + checkbox[i].value; 
             ShowElement(span[i]);
-            console.log($('#textid').elements);
+            xzd = xzd + span[i];
            }  
        } 
- 
+
 $('#surezd').click(function () {
+var checkbox = document.getElementsByName("che");  
+var span=$(".sp"); 
+var xzd ="";
+for ( var i = 0; i < checkbox.length; i++) { 
+        if(checkbox[i].checked){ 
+              console.log(span[i].innerHTML);
+            xzd = xzd + span[i].innerText;}
+       } 
 $.ajax({
     type:'post',
     url:Path+'/AcademyKeys/updateMsg',
@@ -114,15 +123,15 @@ $.ajax({
     data:{
       "flag":flag,
       "id":id,
-      "value":$('#textid').val() ,
+      "value":xzd ,
       "necessary":$('input:radio:checked').val(),
     },
     
   });
 })
 })
-
 /*更新字段*/
+
 
 
 
