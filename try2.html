@@ -1,41 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>register</title>
+<style type="text/css">
+   ul{
+    list-style: none;
+   }
+   li{
+    line-height: 30px;
+   }
+    span{
+        color: red;
+        display: none;
+
+    }
+</style>
+</head>
+<body>
 <fieldset>
-        <legend>双击用户名进行编辑</legend>
-        <dl>
-            <dt>你的用户名:</dt>
-            <dd ondblclick="ShowElement(this)">诸葛亮</dd>
-        </dl>
-    </fieldset>
-
-
-
-
-
+    <ul>
+        <li>accountMail <input type="email" name="accountMail">&nbsp<span>邮箱格式不正确</span></li>
+        <li>accountPsw <input type="password" name="accountPsw"></li>
+        <li>userName <input type="text" name="userName"></li>
+        <li>userNumber <input type="text" name="userNumber">&nbsp<span>学号不正确</span></li>
+        <li>smartPhone <input type="text" name="smartPhone">&nbsp<span>号码不正确</span></li>
+        <li>ID <input type="text" name="ID">&nbsp<span>身份证不正确</span></li>
+        
+   </ul>
+   <input type="submit" name="" id="submit">
+</fieldset>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript">
-        function ShowElement(element) {
-            var oldhtml = element.innerHTML;
-            //如果已经双击过，内容已经存在input，不做任何操作
-            if(oldhtml.indexOf('type="text"') > 0){
-                return;
-            }
-            //创建新的input元素
-            var newobj = document.createElement('input');
-            //为新增元素添加类型
-            newobj.type = 'text';
-            //为新增元素添加value值
-            newobj.value = oldhtml;
-            //为新增元素添加光标离开事件
-            newobj.onblur = function() {
-                element.innerHTML = this.value == oldhtml ? oldhtml : this.value;
-                //当触发时判断新增元素值是否为空，为空则不修改，并返回原有值 
-            }
-            //设置该标签的子节点为空
-            element.innerHTML = '';
-            //添加该标签的子节点，input对象
-            element.appendChild(newobj);
-            //设置选择文本的内容或设置光标位置（两个参数：start,end；start为开始位置，end为结束位置；如果开始位置和结束位置相同则就是光标位置）
-            newobj.setSelectionRange(0, oldhtml.length);
-            //设置获得光标
-            newobj.focus();
 
-        }
-    </script>
+    $(document).ready(function () {
+  $("input[name='accountMail']").change(  function()
+   {
+    var patten1= new RegExp(/^[0-9|A-z|_]{1,17}[@][0-9|A-z]{1,3}.(com)$/);
+      var mail = $("input[name='accountMail']").val();
+      if(patten1.test(mail))
+      {
+          $("ul li:eq(0) span").css({"display":"none"});
+      }
+    else
+      {
+          $("ul li:eq(0) span").css({"display":"block"});
+      }
+   }
+);
+$("input[name='userNumber']").change(  function()
+   {
+   var patten2= new RegExp(/^\d{12}$/);
+     var num =  $("input[name='userNumber']").val();
+      if(patten2.test(num))
+      {
+          $("ul li:eq(3) span").css({"display":"none"});
+      }
+    else
+      {
+          $("ul li:eq(3) span").css({"display":"block"});
+      }
+   }
+);
+$("input[name='ID']").change(  function()
+   {
+   var patten3= new RegExp(/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/);
+     var ID =  $("input[name='ID']").val();
+      if(patten3.test(ID))
+      {
+          $("ul li:eq(5) span").css({"display":"none"});
+      }
+    else
+      {
+          $("ul li:eq(5) span").css({"display":"block"});
+      }
+   }
+);
+
+
+
+
+    $('#submit').click(function(){
+
+         $.ajax({
+            type: 'post',
+            url: '',
+            contentType: 'application/x-www-form-urlencoded',
+            dataType: 'json',
+            async: true,
+            data: {
+              
+                "accountPsw":  $("input[name='accountPsw']").val(),
+                  "accountMail": $("input[name='accountMail']").val(),
+                "userName":  $("input[name='userName']").val(),
+                "userNumber":  $("input[name='userNumber']").val(),
+                "smartPhone":  $("input[name='smartPhone']").val(),
+            },
+            success: function(data) {
+
+            },
+        });
+
+    });
+         
+    });
+</script>
+
+</body>
+</html>
