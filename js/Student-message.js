@@ -7,32 +7,32 @@ $(document).ready(function() {
     firstshow();
     var zdlength;//字段对象
     function firstshow() {
-         $.ajax({
-            type: 'post',
-            url: Path + '/AcademyKeys/getAllMsg',
-            contentType: 'application/x-www-form-urlencoded',
-            dataType: 'json',
-            async: false,
-            data: {
-                "flag": flag,
-            },
-            success: function(result) {
-                  $("#zdtr th:gt(0)").remove();
-                  $('#select').html("");
-               zdlength=result.data;
-             
-                var str1 = '';
-                var str2 = '';
-                for (var i = 0; i < result.data.length; i++) {
-                    var opids = result.data[i].id;
-                    str1 += '<th>' + result.data[i].value + '</th>';
-                    str2 += '<option value=' + opids + ' name="opt" >' + result.data[i].value + '</option>';
-                }
-                $('#zdtr').append(str1);
-                $('#select').append(str2);
-            }
-        });
+       $.ajax({
+        type: 'post',
+        url: Path + '/AcademyKeys/getAllMsg',
+        contentType: 'application/x-www-form-urlencoded',
+        dataType: 'json',
+        async: false,
+        data: {
+            "flag": flag,
+        },
+        success: function(result) {
+          $("#zdtr th:gt(0)").remove();
+          $('#select').html("");
+          zdlength=result.data;
+          
+          var str1 = '';
+          var str2 = '';
+          for (var i = 0; i < result.data.length; i++) {
+            var opids = result.data[i].id;
+            str1 += '<th>' + result.data[i].value + '</th>';
+            str2 += '<option value=' + opids + ' name="opt" >' + result.data[i].value + '</option>';
+        }
+        $('#zdtr').append(str1);
+        $('#select').append(str2);
     }
+});
+   }
 
     /*显示所有字段*/
 

@@ -2,16 +2,21 @@
 *{
 	outline: none;
 }
-.header nav ul li a{
- font-size: 20px;
+.clear{
+	clear: both;
 }
-.header nav .brand-logo{
-font-size: 26px;
+/*导航栏*/
+nav{
+	background-color: #493b61;
 }
 
-.header .dropdown-content li a{
-	color: black;
+.row .col{
+	padding: 0;
 }
-nav{
-	background-color:#546e7a;
+
+
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #d29396;
 }

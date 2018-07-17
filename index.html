@@ -1,272 +1,100 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>JS编辑内容</title>
+	<title>首页</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="css/font.css">
+  <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="css/base.css">
+  <style type="text/css">
+  .login a{
+    float: right; 
+    margin-right: 4%;
+    font-weight: bold;
+    color:black;
+  }
+  .main .parallax-container {
+    height: 650px;
+  }
+  </style>
 </head>
 <body>
-   <!--  <div>
-        <b>电脑：</b><span >小米笔记本电脑</span><button onclick="edit(this)">编辑</button>
-    </div>
-    <div>
-        <b>手机：</b><span>华为手机</span><button onclick="edit(this)">编辑</button>
-    </div>
 
-
-
-<script>
-
-
-
-        /*点击编辑即可要修改的内容*/
-
-        function edit(element) {
-
-            element.innerHTML="保存";
-
-            var prev=element.previousSibling;
-
-            var oldhtml=prev.innerHTML;
-
-            prev.innerHTML="";
-
-            var newObj=document.createElement("textarea");
-
-            newObj.className="textArea";
-
-            newObj.innerHTML=oldhtml;
-
-            prev.appendChild(newObj);
-
-            newObj.focus();
-
-            newObj.onblur=function(){
-
-                alert(prev.id);
-
-                element.innerHTML="编辑";
-
-                prev.innerHTML=this.value?this.value:oldhtml;
-
-            }
-
-        }
-
-    
-
-
-
-</script>
-
- -->
- <!-- <table id="table" class="ke-zeroborder" cellspacing="0" cellpadding="0" border="1">
-<tbody><tr><td colspan="12" >风险发生概率的判断：<br />高风险：发生概率超过60%；<br />
-中风险：发生概率在30%到60%之间；<br />
-低风险：发生概率小于30%<br />
-<br />
-风险严重性的判断：<br />
-高严重性：会严重影响项目进度，导致项目延期20%以上，或严重影响到项目质量，项目的质量到了无法评估的地步等等；<br />
-中严重性：对项目的进度和质量影响不是很大，在可控范围内，如项目延期不会超过20%，项目的质量明确可以得到保障；<br />
-低严重性：对项目影响较小，可以很容易规避。</td>
-</tr>
-<tr>
-<td class="A">操作</td>
-<td class="A">序号</td>
-<td class="A">风险事件归类</td>
-<td class="A">发现阶段</td>
-<td class="A">发生概率</td>
-<td class="A">严重性</td>
-<td class="A">风险分析</td>
-<td class="A">风险措施</td>
-<td class="A">责任人(唯一)</td>
-<td class="A">状态</td>
-<td class="A">当前进展</td>
-<td class="A">备注</td>
-</tr>
-
-
-
-
-<tr class="R1">
-<td rowspan="3" name="R1td"><input type="button" name="R1" value="增加行" onclick="test(this)" /></td>
-<td rowspan="3" name="R1td">1</td>
-<td rowspan="3" name="R1td">苹果6月1号协议</td>
-<td>功能测试</td>
-<td>高</td>
-<td>高</td>
-<td>增加延期；</td>
-<td>项目延期10天；</td>
-<td>A</td>
-<td>已发生</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr class="R1">
-<td >功能测试</td>
-<td>高</td>
-<td>高</td>
-<td>开发和sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss测试都；</td>
-<td>开发先搭建一项目质量；</td>
-<td>B</td>
-<td>未发生</td>
-<td></td>
-<td></td>
-</tr>
-
-
-<tr class="R1">
-<td>功能测试</td>
-<td>高</td>
-<td>高</td>
-<td>定</td>
-<td>和平台组进崩溃</td>
-<td>C</td>
-<td>已发生</td>
-<td></td>
-<td></td>
-</tr>
-
-
-<tr class="R2">
-<td rowspan="3" name="R2td"><input type="button" name="R2" value="增加行" onclick="test(this)" /></td>
-<td rowspan="3" name="R2td">1</td>
-<td rowspan="3" name="R2td">苹果6月1号协议</td>
-<td>功能是是事实上事实上事实上事实上测试</td>
-<td>高</td>
-<td>高</td>
-<td>增加的顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶大 延期；</td>
-<td>项目延期10天；</td>
-<td>A</td>
-<td>已发生</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr class="R2">
-<td >功能测试</td>
-<td>高</td>
-<td>高</td>
-<td>开发和ss呃呃呃鹅鹅鹅鹅鹅鹅饿鹅鹅鹅饿鹅鹅鹅饿嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎测试都；</td>
-<td>开发先搭建一项目质量；</td>
-<td>B</td>
-<td>未发生</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-
-<input type="button" value="编辑" name="edit" onclick="edit()"></input>
-<input type="button" value="保存" name="save" onclick="mySave()"></input>
-
-
-<script>
-function test(obj) 
-{   
- var R1InnerHtml ='<tr class="R1"><td>&nbsp </td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>';
-
-var classFlag = obj.name;
-
-var rowStartIndex = obj.parentNode.parentNode.rowIndex ;
-var rowChildCount = document.getElementsByClassName(classFlag).length;
-var rowLocated    = rowStartIndex + rowChildCount;
-
-var tableObj  = document.getElementById("table");
-var rowNew = tableObj.insertRow(rowLocated); 
-
-rowNew.setAttribute("class",classFlag);
-
-
-rowNew.innerHTML = R1InnerHtml;
-
-
-var TDRowSpan = document.getElementsByName(classFlag + 'td');
-for(var i in TDRowSpan){
-TDRowSpan[i].rowSpan = rowChildCount +1;
-} 
-}
-
-
-
-
-function edit(){
-  var tdObj = document.getElementsByTagName("td");
-  for(var i = 0 ; i<tdObj.length; i++){
-  curObj = tdObj[i];     
-  curObj.innerHTML = "<input type='text' value='" + curObj.innerText + "' name='b'/>";
-} 
-}
-    
-   function mySave(){
-    var tdObj = document.getElementsByTagName("td")[1].firstElementChild.value;    
-var tdObj = document.getElementsByTagName("td");
-    for(var i = 0 ; i<tdObj.length; i++){   
-
-    var inputValue = tdObj[i].firstElementChild.value;     
-    tdObj[i].innerText = inputValue;
-}
-
-
-var test = document.getElementById("table").outerHTML ;
-
-test +=myStyle;
-alert(test);
-document.write(test);
-   }
-</script>
-
-
-
-
-<style type="text/css">
-.A{width:90px;height:35px;}
-</style>
- -->
- <fieldset>
-        <legend>双击用户名进行编辑</legend>
-        <dl>
-            <dt>你的用户名:</dt>
-            <dd ondblclick="ShowElement(this)">诸葛亮</dd>
-        </dl>
-    </fieldset>
-
-
-
-
-
-<script type="text/javascript">
-        function ShowElement(element) {
-            var oldhtml = element.innerHTML;
-            //如果已经双击过，内容已经存在input，不做任何操作
-            if(oldhtml.indexOf('type="text"') > 0){
-                return;
-            }
-            //创建新的input元素
-            var newobj = document.createElement('input');
-            //为新增元素添加类型
-            newobj.type = 'text';
-            //为新增元素添加value值
-            newobj.value = oldhtml;
-            //为新增元素添加光标离开事件
-            newobj.onblur = function() {
-                element.innerHTML = this.value == oldhtml ? oldhtml : this.value;
-                //当触发时判断新增元素值是否为空，为空则不修改，并返回原有值 
-            }
-            //设置该标签的子节点为空
-            element.innerHTML = '';
-            //添加该标签的子节点，input对象
-            element.appendChild(newobj);
-            //设置选择文本的内容或设置光标位置（两个参数：start,end；start为开始位置，end为结束位置；如果开始位置和结束位置相同则就是光标位置）
-            newobj.setSelectionRange(0, oldhtml.length);
-            //设置获得光标
-            newobj.focus();
-
-        }
-    </script>
+  <div class="row header">
+   <div class="col s12 m12 l12">
+       <div class="login"><a href="Login/login.html">登陆</a></div>
+      <div class="clear"></div>
+      <nav>
+       <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">&nbsp&nbsp广东海洋大学学生互助平台</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+         <li><a href="#">首页</a></li>
+         <li><a href="#">系统用户</a></li>
+         <li><a href="#">学生信息系统</a></li>
+         <li><a href="#">奖励分系统</a></li>
+         <li><a href="#">奖学金系统</a></li>
+         <li><a href="#">关于我们</a></li>
+       </ul>
+     </div>
+   </nav>
+
+   <ul class="sidenav" id="mobile-demo">
+     <li><a href="#">首页</a></li>
+     <li><a href="#">系统用户</a></li>
+     <li><a href="#!">学生信息系统</a></li>
+     <li><a href="#!">奖励分系统</a></li>
+     <li><a href="#!">奖学金系统</a></li>
+     <li><a href="#!">关于我们</a></li>
+   </ul>
+</div>
+</div>
+
+
+
+<div class="row main">
+ <div class="parallax-container">
+  <div class="parallax"><img src="images/bgb1.jpg"></div>
+</div>
+</div>
+
+
+<div class="row foot">
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">版权所有：广东海洋大学</p>
+                <p class="grey-text text-lighten-4">开发维护：海洋智能软件团队</p>
+                <p class="grey-text text-lighten-4">指导老师：广东海洋大学数学与计算机学院软件技术系范锐教授</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系热线：135—7078—6772</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系邮箱：1037486652@qq.com</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系微信：XXXXXXXXXXXXXXXX</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">公司地址：湛江市广东海洋大学钟海楼钟海楼04008</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright All Rights Reserved 
+            <a class="grey-text text-lighten-4 right" href="#!">关于我们</a>
+            </div>
+          </div>
+        </footer>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
 </body>
-
 </html>
