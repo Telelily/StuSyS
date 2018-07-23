@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户管理</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="../css/font.css">
+  <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/base.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/UserIndex.css" media="screen,projection">
+  <style type="text/css">
+ 
+  </style>
+</head>
+<body>
+
+  <div class="row header">
+   <div class="col s12 m12 l12">
+     <div class="login"><span style="font-weight: bold;">欢迎您：</span><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>数学与计算机学院</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#modal1" class="modal-trigger" id="gotochpw">修改密码</a></li>
+        <li><a href="#!">个人中心</a></li>
+        <li><a href="#!">退出登录</a></li>
+      </ul></div> 
+      <div class="clear"></div>
+      <nav>
+       <div class="nav-wrapper">
+         <a href="#!" class="brand-logo hide-on-med-and-down">&nbsp&nbsp广东海洋大学学生互助平台</a>
+         <a href="#!" class="brand-logo hide-on-large-only">学生互助平台</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+         <ul class="right hide-on-med-and-down">
+           <li><a  href="../Login/main.html">首页</a></li>
+           <li><a class="curPage" href="UserIndex.html">系统用户</a></li>
+           <li><a href="../Message/StuManageIndex.html">学生信息系统</a></li>
+           <li><a href="../Score/ScoreIndex.html">操行分系统</a></li>
+           <li><a href="#">奖学金系统</a></li>
+           <li><a href="#">关于我们</a></li>
+         </ul>
+       </div>
+     </nav>
+
+     <ul class="sidenav" id="mobile-demo">
+       <li><a  href="../Login/main.html">首页</a></li>
+       <li><a class="curPage" href="UserIndex.html">系统用户</a></li>
+       <li><a href="../Message/StuManageIndex.html">学生信息系统</a></li>
+       <li><a href="../Score/ScoreIndex.html">操行分系统</a></li>
+       <li><a href="#!">奖学金系统</a></li>
+       <li><a href="#!">关于我们</a></li>
+     </ul>
+   </div>
+</div>
+
+
+<div class="row main">
+   <div class="row" style="padding: 0 0 0 10px ">
+     <div class="" style=" float: right; margin-bottom: 20px; margin-top: 40px;margin-right: 10px;">
+        <a href="UserMesManage.html"class="btn">用户管理</a>
+        <a href="UserIndex.html" class="btn">用户信息</a>
+        <a href="AddUser.html" class="btn">新增用户</a>
+    </div>
+       <h3 style="display: inline-block;">用户管理</h3>
+    <div>
+      <table class="">
+        <thead>
+          <tr>
+            <th>角色名</th>
+            <th>登录帐号</th>
+            <th>联系方式</th>
+            <th>是否启用</th>
+            <th>操作 </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>12312341234</td>
+            <td>是</td>
+            <td><a href="UserDetail.html" style="color: #5d4673" href="">详情</a>&nbsp&nbsp<a href="UserEdit.html" style="color: #5d4673" href="">编辑</a>&nbsp&nbsp<a style="color: #5d4673" href="">删除</a></td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>12312341234</td>
+            <td>是</td>
+            <td><a style="color: #5d4673" href="">详情</a>&nbsp&nbsp<a style="color: #5d4673" href="">编辑</a>&nbsp&nbsp<a style="color: #5d4673" href="">删除</a></td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>12312341234</td>
+            <td>是</td>
+            <td><a style="color: #5d4673" href="">详情</a>&nbsp&nbsp<a style="color: #5d4673" href="">编辑</a>&nbsp&nbsp<a style="color: #5d4673" href="">删除</a></td>
+          </tr>
+        </tbody>
+      </table> </div>
+
+    <div class="" style="text-align: center; margin-top: 50px;">
+     <ul class="pagination">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="row foot">
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">版权所有：广东海洋大学</p>
+                <p class="grey-text text-lighten-4">开发维护：海洋智能软件团队</p>
+                <p class="grey-text text-lighten-4">指导老师：广东海洋大学数学与计算机学院软件技术系范锐教授</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系热线：135—7078—6772</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系邮箱：1037486652@qq.com</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系微信：XXXXXXXXXXXXXXXX</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">公司地址：湛江市广东海洋大学钟海楼钟海楼04008</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright All Rights Reserved 
+            <a class="grey-text text-lighten-4 right" href="#!">关于我们</a>
+            </div>
+          </div>
+        </footer>
+</div>
+
+
+
+
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/init.js"></script>
+</body>
+</html>

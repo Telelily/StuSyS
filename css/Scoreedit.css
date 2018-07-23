@@ -1,0 +1,30 @@
+@charset "utf-8";
+.main .topoption a {margin-right: 10px;} 
+ .main .row .col.s3 {
+    width: 10%;
+}
+.main .row .col.s4 {
+    width: 16.333333%;
+}
+
+.main .container .input-field.col label {
+    left: -3.25rem;
+}
+.main .container .input-field.col label {
+    left: -3.25rem;
+}
+.input-field>label {
+    color:rgba(0,0,0,0.87);
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+}
+.select-wrapper input.select-dropdown{
+     color: rgba(0,0,0,0.87);
+}
+.main .secondary-content {
+    float: right;
+    color: #ad97b5;
+}
+.main .collapsible-body ul li:hover{cursor: pointer;}
+.main .search:hover{cursor: pointer;}

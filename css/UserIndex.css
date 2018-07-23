@@ -1,0 +1,69 @@
+@charset "utf-8";
+ .header .login {
+    float: right; 
+    margin-right: 10px;
+  }
+.header .login a.btn{
+    text-decoration: none;
+    color: #242527;
+    background-color: #d4ddf9;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;}
+.header .login .dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: #382c34;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color:#7f80a5;
+}
+
+.btn, .btn-large, .btn-small {background-color:#5d4673 }
+
+
+[type="checkbox"]:checked+span:not(.lever):before {
+    border-right: 2px solid #5d4673;
+    border-bottom: 2px solid #5d4673;
+
+}
+
+label {font-size: .8rem;color: #7d7d7d;}
+.input-field>label{ color: #7d7d7d;}
+
+
+  .main input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: transparent;
+    border:ridge;
+    border-radius: 10px;
+    outline: none;
+    height: 2rem;
+    width: 60%;
+    margin: 0 0 8px 64px;
+ ;}
+
+  .pagination li.active a {
+    color: #fff;
+    background-color: #5d4673;
+}
+
+ [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+      border: 2px solid  #5d4673;
+      }    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+        background-color:  #5d4673;
+      } 
+
+
+.modal .input-field {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    padding: 0 26%;
+}
+ .modal .input-field.col label {
+    left: 30%;
+}

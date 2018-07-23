@@ -1,0 +1,87 @@
+@charset "utf-8";
+*{
+    outline: none;
+  }
+  .clear{
+    clear: both;
+  }
+   .curPage{background-color: rgba(0,0,0,0.1);}
+ 
+ 
+  /*导航栏*/
+  nav{
+    background-color: #493b61;
+  }
+  /*导航栏*/
+
+  
+  /*欢迎您*/
+  .header .login {
+    float: right; 
+    margin-right: 10px;
+  }
+.header .login a.btn{
+    text-decoration: none;
+    color: #242527;
+    background-color: #d4ddf9;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;}
+.header .login .dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: #382c34;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+ /*欢迎您*/
+
+  .row .col{
+    padding: 0;
+  }
+  .main .slider{height: 572px;}
+  .main .slider .slides{height: 572px;}
+  .main .slider .indicators .indicator-item.active {
+    background-color: #563358;
+}
+  .page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #d29396;
+  }
+  /*button颜色*/
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color:#7f80a5;
+}
+
+.btn, .btn-large, .btn-small {background-color:#4c4375 }
+/*button颜色*/
+
+   .input-field {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    padding: 0 30%;
+}
+.input-field.col label {
+    left: 25%;
+}
+
+.modal input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: transparent;
+    border:ridge;
+    border-radius: 10px;
+    outline: none;
+    height: 3rem;
+    width: 90%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;}

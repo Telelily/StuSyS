@@ -4,6 +4,10 @@ body{background: url(../images/bg3.jpg) center top no-repeat; position:relative;
     margin-left: -1rem;
     width: calc(70% - 2rem);
   }
+
+
+
+  /*在modal里面使其居中*/
    .input-field {
     position: relative;
     margin-top: 1rem;
@@ -13,6 +17,9 @@ body{background: url(../images/bg3.jpg) center top no-repeat; position:relative;
  .input-field.col label {
     left: 25%;
 }
+ /*在modal里面使其居中*/
+
+/*修改input边框*/
   .main input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
     background-color: transparent;
     border:ridge;
@@ -29,7 +36,7 @@ body{background: url(../images/bg3.jpg) center top no-repeat; position:relative;
     transition: border .3s, -webkit-box-shadow .3s;
     transition: box-shadow .3s, border .3s;
     transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;}
-
+/*修改input边框*/
     .main .col .row {
       margin-left: 36%;
       margin-right: -28%;
@@ -78,13 +85,6 @@ body{background: url(../images/bg3.jpg) center top no-repeat; position:relative;
     height: 10px;
     width: 100%;
 }
-/*.section1 .col .row {
-    margin-left: 373px;
-    margin-right: 0px;
-}
-.section1 .input-field.col label {
-    left: -3.25rem;
-}*/
 
 .section1 .btn{ background-color: #225075;}
 .section1 .btn:hover, .btn-large:hover, .btn-small:hover {background-color: #225075;}

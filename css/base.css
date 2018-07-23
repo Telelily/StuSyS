@@ -5,6 +5,7 @@
 .clear{
 	clear: both;
 }
+ .curPage{background-color: rgba(0,0,0,0.1);}
 /*导航栏*/
 nav{
 	background-color: #493b61;

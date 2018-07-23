@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>用户权限-查看</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="../css/font.css">
+  <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/base.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/UserIndex.css" media="screen,projection">
+  <style type="text/css">
+ 
+  </style>
+</head>
+<body>
+
+  <div class="row header">
+   <div class="col s12 m12 l12">
+     <div class="login"><span style="font-weight: bold;">欢迎您：</span><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>数学与计算机学院</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#modal1" class="modal-trigger" id="gotochpw">修改密码</a></li>
+        <li><a href="#!">个人中心</a></li>
+        <li><a href="#!">退出登录</a></li>
+      </ul></div> 
+      <div class="clear"></div>
+      <nav>
+       <div class="nav-wrapper">
+         <a href="#!" class="brand-logo hide-on-med-and-down">&nbsp&nbsp广东海洋大学学生互助平台</a>
+         <a href="#!" class="brand-logo hide-on-large-only">学生互助平台</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+         <ul class="right hide-on-med-and-down">
+           <li><a  href="../Login/main.html">首页</a></li>
+           <li><a class="curPage" href="UserIndex.html">系统用户</a></li>
+           <li><a href="../Message/StuManageIndex.html">学生信息系统</a></li>
+           <li><a href="../Score/ScoreIndex.html">操行分系统</a></li>
+           <li><a href="#">奖学金系统</a></li>
+           <li><a href="#">关于我们</a></li>
+         </ul>
+       </div>
+     </nav>
+
+     <ul class="sidenav" id="mobile-demo">
+       <li><a  href="../Login/main.html">首页</a></li>
+       <li><a class="curPage" href="UserIndex.html">系统用户</a></li>
+       <li><a href="../Message/StuManageIndex.html">学生信息系统</a></li>
+       <li><a href="../Score/ScoreIndex.html">操行分系统</a></li>
+       <li><a href="#!">奖学金系统</a></li>
+       <li><a href="#!">关于我们</a></li>
+     </ul>
+   </div>
+</div>
+
+
+<div class="row main" style="padding-top: 50px; padding-bottom: 50px;">
+ 
+  <div class="container">
+     <div class="row">
+      <div class="col s12 m3 l3">
+        <h4>系统用户</h4>
+        <p>
+          <label>
+            <input type="checkbox"/>
+            <span>查看本用户信息</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox"/>
+            <span>编辑本用户信息</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" />
+            <span>查看子用户信息</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox"/>
+            <span>增加子用户</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox"/>
+            <span>编辑子用户</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" />
+            <span>删除子用户</span>
+          </label>
+        </p>
+      </div>
+
+        <div class="col s12 m3 l3">
+          <h4>学生信息管理系统</h4>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>查询学生信息</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>导出学生信息</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>增加单个学生</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>导入多个学生</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>修改学生信息</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>删除学生</span>
+            </label>
+          </p>
+      </div>
+
+        <div class="col s12 m3 l3">
+          <h4>操行分系统</h4>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>查询操行分</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>查询单个学生操行分记录</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>导出操行分表格</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>操行分操作（加分减分）</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"/>
+              <span>查看所有用户操行分记录</span>
+            </label>
+          </p>
+      </div>
+     
+        <div class="col s12 m3 l3">
+            <h4>奖学金系统</h4>
+            <p>
+              <label>
+                <input type="checkbox"/>
+                <span>查询奖学金统计情况</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox"/>
+                <span>导出奖学金统计表格</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>查询学科成绩分</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox"/>
+                <span>查询身体素质分</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox"/>
+                <span>导入学科成绩分</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>导入身体素质分</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>增加体育识别字段</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>编辑单个学生学科成绩分</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>编辑单个学生体育素质分</span>
+              </label>
+            </p>
+      </div>
+
+
+    
+
+    </div>
+  </div>  
+</div>
+
+
+<div class="row foot">
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">版权所有：广东海洋大学</p>
+                <p class="grey-text text-lighten-4">开发维护：海洋智能软件团队</p>
+                <p class="grey-text text-lighten-4">指导老师：广东海洋大学数学与计算机学院软件技术系范锐教授</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系热线：135—7078—6772</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系邮箱：1037486652@qq.com</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系微信：XXXXXXXXXXXXXXXX</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">公司地址：湛江市广东海洋大学钟海楼钟海楼04008</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright All Rights Reserved 
+            <a class="grey-text text-lighten-4 right" href="#!">关于我们</a>
+            </div>
+          </div>
+        </footer>
+</div>
+
+
+
+
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/init.js"></script>
+</body>
+</html>

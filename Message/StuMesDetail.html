@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学生资料</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="../css/font.css">
+  <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/base.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/StuManageIndex.css" media="screen,projection">
+  <style type="text/css">
+ .main .topoption a {margin-right: 10px;} 
+ .main .row .col.s3 {
+    width: 10%;
+}
+.main .row .col.s4 {
+    width: 16.333333%;
+}
+  </style>
+</head>
+<body>
+
+   <div class="row header">
+   <div class="col s12 m12 l12">
+     <div class="login"><span style="font-weight: bold;">欢迎您：</span><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>数学与计算机学院</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#modal1" class="modal-trigger" id="gotochpw">修改密码</a></li>
+        <li><a href="#!">个人中心</a></li>
+        <li><a href="#!">退出登录</a></li>
+      </ul></div> 
+      <div class="clear"></div>
+      <nav>
+       <div class="nav-wrapper">
+         <a href="#!" class="brand-logo hide-on-med-and-down">&nbsp&nbsp广东海洋大学学生互助平台</a>
+         <a href="#!" class="brand-logo hide-on-large-only">学生互助平台</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+         <ul class="right hide-on-med-and-down">
+           <li><a  href="../Login/main.html">首页</a></li>
+           <li><a  href="../User/UserIndex.html">系统用户</a></li>
+           <li><a class="curPage" href="#">学生信息系统</a></li>
+           <li><a href="../Score/ScoreIndex.html">操行分系统</a></li>
+           <li><a href="#">奖学金系统</a></li>
+           <li><a href="#">关于我们</a></li>
+         </ul>
+       </div>
+     </nav>
+     <ul class="sidenav" id="mobile-demo">
+       <li><a  href="../Login/main.html">首页</a></li>
+       <li><a  href="../User/UserIndex.html">系统用户</a></li>
+       <li><a class="curPage" href="#!">学生信息系统</a></li>
+       <li><a href="../Score/ScoreIndex.html">操行分系统</a></li>
+       <li><a href="#!">奖学金系统</a></li>
+       <li><a href="#!">关于我们</a></li>
+     </ul>
+   </div>
+ </div>
+
+
+
+
+<div class="row main">
+  <div class="topoption" style="margin-left: 20px;">
+    <a href="StuManageIndex.html" class="btn">学生信息管理</a>
+    <a href="StucertificationInedx.html" class="btn">学生认证</a>
+    <a href="" class="btn">优秀班申请</a>
+  </div>
+
+
+
+
+   <div class="row" style="padding: 0 0 0 10px ">
+      <h3>学生信息管理 &gt <span style="font-size:30px;"> 学生资料</span></h3>
+     <div class="" style=" float: right; margin-bottom: 20px; margin-top: 40px;margin-right: 30px;">
+        <a href="StucertificationInedx.html" class="btn">返回</a>
+        <a href="#modal1" class="btn modal-trigger" id="" >通过认证</a>
+        <a href="#modal2" class="btn modal-trigger">认证失败</a>
+      </div>
+    
+    <div>
+      <table class="">
+        <thead>
+          <tr> 
+            <th>院系</th>
+            <th>班级</th> 
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>籍贯</th>
+            <th>手机</th>
+            <th>邮箱</th>
+            <th>政治面貌</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          
+        </tbody>
+      </table> </div>
+  </div>
+</div>
+
+
+
+
+<div class="row foot">
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">版权所有：广东海洋大学</p>
+                <p class="grey-text text-lighten-4">开发维护：海洋智能软件团队</p>
+                <p class="grey-text text-lighten-4">指导老师：广东海洋大学数学与计算机学院软件技术系范锐教授</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系热线：135—7078—6772</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系邮箱：1037486652@qq.com</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系微信：XXXXXXXXXXXXXXXX</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">公司地址：湛江市广东海洋大学钟海楼钟海楼04008</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright All Rights Reserved 
+            <a class="grey-text text-lighten-4 right" href="#!">关于我们</a>
+            </div>
+          </div>
+        </footer>
+</div>
+
+ <div id="modal1" class="modal">
+        <div class="modal-footer">
+          <a href="#!" class="modal-close btn-flat" style="font-size:24px;" >&times</a>
+        </div>
+        <div class="modal1-content content1">
+          
+            <h4  style="text-align: center;">通过认证</h4>
+            <p style="text-align: center;">确认通过 <span></span> 同学的认证申请？</p>
+
+            <div style="text-align: center;">
+              <p>
+                <button id="Resetsure" class="btn waves-effect waves-light modal-close">确定</button>
+                <button class="btn waves-effect waves-light modal-close">取消</button>
+              </p>
+            </div>
+        </div></div>
+ <div id="modal2" class="modal">
+        <div class="modal-footer">
+          <a href="#!" class="modal-close btn-flat" style="font-size:24px;" >&times</a>
+        </div>
+        <div class="modal1-content content1">
+          
+            <h4  style="text-align: center;">认证失败</h4>
+            <p style="text-align: center;">确认拒绝 <span></span> 同学的认证申请？</p>
+            <div class="" style="text-align: center;">
+              <div class="input-field col s4">
+                <input id="" type="text" class="validate">
+                <label for="">拒绝理由：</label>
+              </div>
+            </div>
+
+            <div style="text-align: center;">
+              <p>
+                <button id="Resetsure" class="btn waves-effect waves-light modal-close">确定</button>
+                <button class="btn waves-effect waves-light modal-close">取消</button>
+              </p>
+            </div>
+        </div></div>     
+
+
+
+
+
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/init.js"></script>
+
+</body>
+</html>
