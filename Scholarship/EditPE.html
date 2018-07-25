@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>身体素质分操作</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="../css/font.css">
+  <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/base.css" media="screen,projection">
+  <link rel="stylesheet" href="../css/StuManageIndex.css" media="screen,projection">
+  <style type="text/css">
+ .main .topoption a {margin-right: 10px;} 
+ .main .row .col.s3 {
+    width: 10%;
+}
+.main .row .col.s4 {
+    width: 16.333333%;
+}
+.main .edit:hover{cursor: pointer;}
+
+  </style>
+
+</head>
+<body>
+
+  <div class="row header">
+   <div class="col s12 m12 l12">
+     <div class="login"><span style="font-weight: bold;">欢迎您：</span><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>数学与计算机学院</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#modal1" class="modal-trigger" id="gotochpw">修改密码</a></li>
+        <li><a href="#!">个人中心</a></li>
+        <li><a href="#!">退出登录</a></li>
+      </ul></div> 
+      <div class="clear"></div>
+      <nav>
+       <div class="nav-wrapper">
+         <a href="#!" class="brand-logo hide-on-med-and-down">&nbsp&nbsp广东海洋大学学生互助平台</a>
+         <a href="#!" class="brand-logo hide-on-large-only">学生互助平台</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+         <ul class="right hide-on-med-and-down">
+           <li><a  href="../Login/main.html">首页</a></li>
+           <li><a  href="../User/UserIndex.html">系统用户</a></li>
+           <li><a  href="../Message/StuManageIndex.html">学生信息系统</a></li>
+           <li><a  href="../Score/ScoreIndex.html">操行分系统</a></li>
+           <li><a class="curPage" href="ScholarshipIndex.html">奖学金系统</a></li>
+           <li><a href="../Aboutus/aboutus.html">关于我们</a></li>
+         </ul>
+       </div>
+     </nav>
+     <ul class="sidenav" id="mobile-demo">
+       <li><a  href="../Login/main.html">首页</a></li>
+       <li><a  href="../User/UserIndex.html">系统用户</a></li>
+       <li><a  href="../Message/StuManageIndex.html">学生信息系统</a></li>
+       <li><a  href="../Score/ScoreIndex.html">操行分系统</a></li>
+       <li><a class="curPage" href="ScholarshipIndex.html">奖学金系统</a></li>
+       <li><a href="../Aboutus/aboutus.html">关于我们</a></li>
+     </ul>
+   </div>
+</div>
+  
+
+
+<div class="row main">
+  <div class="topoption" style="margin-left: 20px;">
+    <a href="ScholarshipIndex.html" class="btn">奖学金统计</a>
+    <a href="SubjectScoreEdit.html" class="btn">学科成绩分操作</a>
+    <a href="HealthScoreEdit.html" class="btn">身体素质分操作</a>
+    <a href="ScholarshipDocument.html" class="btn">历史操作记录</a>
+  </div>
+   <a style="float: right; margin-right: 20px;"  href="HealthScoreEdit.html" class="btn">取消</a>
+    <a style="float: right; margin-right: 20px;"  href="HealthScoreEdit.html" class="btn">确认</a>
+  <div>
+        <table class="">
+          <thead>
+            <tr>
+              <th>
+               <label>
+                <input type="checkbox" />
+                <span style=" color: rgba(0,0,0,0.87);">全选</span>
+              </label>
+            </th>
+            <th>名称</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <label>
+              <input type="checkbox" />
+              <span></span>
+            </label></td>
+            <td>  <input type="" name="" value="交谊舞" disabled="disabled" id="PE" style="border:none;"> </td>
+
+              <td>
+                <i class="material-icons edit">mode_edit</i>
+                <ul class="hide xuanze">
+                  <li><a class="btn-floating"><i class="material-icons check">check</i></a></li>
+                  <li><a class="btn-floating"><i class="material-icons clear">clear</i></a></li>
+                </ul>
+              </td>
+
+            </tr>
+          </tbody>
+        </table> </div>
+
+</div>
+
+
+
+
+<div class="row foot">
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">版权所有：广东海洋大学</p>
+                <p class="grey-text text-lighten-4">开发维护：海洋智能软件团队</p>
+                <p class="grey-text text-lighten-4">指导老师：广东海洋大学数学与计算机学院软件技术系范锐教授</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系热线：135—7078—6772</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系邮箱：1037486652@qq.com</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">联系微信：XXXXXXXXXXXXXXXX</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">公司地址：湛江市广东海洋大学钟海楼钟海楼04008</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright All Rights Reserved 
+            <a class="grey-text text-lighten-4 right" href="#!">关于我们</a>
+            </div>
+          </div>
+        </footer>
+</div>
+
+
+
+
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/init.js"></script>
+<script type="text/javascript" src="../js/EditPE.js"></script>
+</body>
+</html>
