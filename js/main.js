@@ -1,4 +1,5 @@
 $(document).ready(function () {
+var Path = "http://47.101.33.66:8000/studentsys";
 $('#modal1').modal('open');
 var gotochpw = $('#gotochpw');
 var newpwsure = $('#newpwsure');
@@ -21,4 +22,28 @@ console.log('newpwsure');
   content3.removeClass('hide');
 
 });
+
+    $("#logout").click(function(){
+     
+   $.ajax({
+            type: 'post',
+            url: Path + '/account/logout',
+            contentType: 'application/x-www-form-urlencoded',
+            dataType: 'json',
+            async: true,
+            data: {
+               
+            },
+            success: function(data) {
+                
+            },
+        });
+  });
+
+
+
+
+
+
+
 });

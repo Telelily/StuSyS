@@ -2,7 +2,8 @@
 body{background: url(../images/bg3.jpg) center top no-repeat; position:relative;}
   .main .input-field .prefix ~ input {
     margin-left: -1rem;
-    width: calc(70% - 2rem);
+    width: calc(62% - 2rem);
+    padding-left: 44px;
   }
 
 
@@ -13,12 +14,21 @@ body{background: url(../images/bg3.jpg) center top no-repeat; position:relative;
     margin-top: 1rem;
     margin-bottom: 0rem;
     padding: 0 30%;
+
 }
  .input-field.col label {
     left: 25%;
 }
+
+
+
  /*在modal里面使其居中*/
 
+input{ color: rgba(243, 243, 243, 0.87);
+ padding-left: 10px; 
+
+
+}
 /*修改input边框*/
   .main input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
     background-color: transparent;

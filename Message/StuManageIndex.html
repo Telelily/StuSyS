@@ -74,7 +74,7 @@
       <h3>学生信息管理</h3>
      <div class="" style=" float: right; margin-bottom: 20px; margin-top: 40px;margin-right: 30px;">
         <a href="#modal1" class="btn modal-trigger" id="AddStu" >新增</a>
-        <a href="" class="btn">删除</a>
+        <a href="" class="btn" id="deletestuMes" >删除</a>
         <a href="#modal2" class="btn modal-trigger">导入</a>
         <a href="#modal3" class="btn modal-trigger">导出</a>
       </div>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="input-field col s4">
-          <i class="material-icons prefix search">search</i>
+          <i class="material-icons prefix search" id="search">search</i>
           <input id="icon_prefix" type="text" class="validate">
         </div>
 
@@ -104,18 +104,15 @@
       </div>
     <div>
       <table class="">
-        <thead>
-          <tr>
+        <thead id="ztable">
+          <tr id="zdtr">
             <th>
            <label>
             <input type="checkbox" />
             <span style=" color: rgba(0,0,0,0.87);">全选</span>
           </label>
            </th>
-            <th>学院</th>
-            <th>班级</th>
-            <th>姓名</th>
-            <th>更多</th>
+           
           </tr>
         </thead>
 
@@ -130,26 +127,8 @@
             <td>是</td>
             <td><a href="#modal4" style="color: #5d4673" class="modal-trigger">编辑</a></td>
           </tr>
-          <tr>
-            <td><label>
-            <input type="checkbox" />
-            <span></span>
-          </label></td>
-            <td>Jellybean</td>
-            <td>12312341234</td>
-            <td>是</td>
-            <td><a style="color: #5d4673" href="">编辑</a></td>
-          </tr>
-          <tr>
-            <td><label>
-            <input type="checkbox" />
-            <span></span>
-          </label></td>
-            <td>Lollipop</td>
-            <td>12312341234</td>
-            <td>是</td>
-            <td><a style="color: #5d4673" href="">编辑</a></td>
-          </tr>
+         
+        
         </tbody>
       </table> </div>
 
@@ -207,12 +186,15 @@
         <div class="modal1-content content1">
           
             <h3  style="text-align: center;">新增单个学生信息</h3>
-            <div class="" style="text-align: center;">
+            <div id="addstuspace">
+              
+            </div>
+           <!--  <div class="" style="text-align: center;">
               <div class="input-field col s4">
                 <input id="" type="text" class="validate">
                 <label for="">学院：</label>
               </div>
-            </div>
+            </div>  
             <div class="" style="text-align: center;">
               <div class="input-field col s4">  
                 <input id="" type="text" class="validate">
@@ -230,7 +212,7 @@
                 <input id="" type="text" class="validate">
                 <label for="">学号：</label>
               </div>
-            </div>
+            </div> -->
              <div class="" style="text-align: center;">
               <div class="input-field col s4"> 
                 <label for="">是否双百：
@@ -250,7 +232,7 @@
 
             <div style="text-align: center;">
               <p>
-                <button id="Resetsure" class="btn waves-effect waves-light modal-close">确定</button>
+                <button  id="Sureaddstu" class="btn waves-effect waves-light modal-close">确定</button>
                 <button class="btn waves-effect waves-light modal-close">取消</button>
               </p>
             </div>
@@ -375,7 +357,7 @@
 
             <div style="text-align: center;">
               <p>
-                <button id="Resetsure" class="btn waves-effect waves-light modal-close">确定</button>
+                <button class="btn waves-effect waves-light modal-close">确定</button>
                 <button class="btn waves-effect waves-light modal-close">取消</button>
               </p>
             </div>
@@ -391,6 +373,7 @@
 <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../js/materialize.js"></script>
 <script type="text/javascript" src="../js/init.js"></script>
+<script type="text/javascript" src="../js/StuManageIndex.js"></script>
 
 </body>
 </html>

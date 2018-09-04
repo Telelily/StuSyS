@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+var Path = "http://47.101.33.66:8000/studentsys";
       var editpw =  $('#changepw');
       var content1 = $('.content1');
       var content2 = $('.content2');
@@ -47,9 +47,28 @@ $(document).ready(function(){
        
 
     $("#loginbtn").click(function(){
-     window.location.href =  "./main.html";
      window.event.returnValue=false;
+   $.ajax({
+            type: 'post',
+            url: Path + '/account/login',
+            contentType: 'application/x-www-form-urlencoded',
+            dataType: 'json',
+            async: true,
+            data: {
+                "userAccount": $('#userAccount').val(),
+                "userPassword": $('#userPassword').val(),
+
+            },
+            success: function(data) {
+                
+            },
+        });
+
+   /*  window.location.href =  "./main.html";
+     window.event.returnValue=false;*/
   });
+
+
 
 
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	 帐号 <input type="text" name="" id="userAccount">
+	 密码 <input type="password" name="" id="userPassword">
+	 学院 <input type="text" name="" id="collegeId">
+	 系 <input type="text" name="" id="majorId">
+	 角色 <input type="text" name="" id="roleId">
+  <button id="Sure">确定</button>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    var Path = "http://47.101.33.66:8000/studentsys";
+   
+     $('#Sure').click(function() {
+        $.ajax({
+            type: 'post',
+            url: Path + '/account/register',
+            contentType: 'application/x-www-form-urlencoded',
+            dataType: 'json',
+            async: true,
+            data: {
+                "userAccount": $('#userAccount').val(),
+                "userPassword": $('#userPassword').val(),
+                "collegeId": $('#collegeId').val(),
+                "majorId": $('#majorId').val(),
+                "roleId": $('#roleId').val(),
+                
+            },
+            success: function(data) {
+                
+            },
+        });
+    });
+    
+
+	});
+</script>
+</body>
+</html>
