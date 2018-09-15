@@ -74,24 +74,24 @@
       <h3>学生信息管理</h3>
      <div class="" style=" float: right; margin-bottom: 20px; margin-top: 40px;margin-right: 30px;">
         <a href="#modal1" class="btn modal-trigger" id="AddStu" >新增</a>
-        <a href="" class="btn" id="deletestuMes" >删除</a>
+        <a class="btn" id="deletestuMes" >删除</a>
         <a href="#modal2" class="btn modal-trigger">导入</a>
-        <a href="#modal3" class="btn modal-trigger">导出</a>
+        <a href="#modal3" class="btn modal-trigger" id="export" >导出</a>
       </div>
       <div style="margin-right: 20px;">
         <div class="input-field col s3">
           <select>
             <option value="1">2016</option>
             <option value="2">2015</option>
-            <option value="3">201</option>
+            <option value="3">2014</option>
           </select>
         </div>
 
         <div class="input-field col s3">
-          <select>
-            <option value="2">班级</option>
-            <option value="1">姓名</option>
-            <option value="3">学号</option>
+          <select id="select">
+            <!-- <option value="1">班级</option>
+            <option value="2">姓名</option>
+            <option value="3">学号</option> -->
           </select>
         </div>
 
@@ -99,8 +99,6 @@
           <i class="material-icons prefix search" id="search">search</i>
           <input id="icon_prefix" type="text" class="validate">
         </div>
-
-
       </div>
     <div>
       <table class="">
@@ -108,7 +106,7 @@
           <tr id="zdtr">
             <th>
            <label>
-            <input type="checkbox" />
+            <input type="checkbox" id="all"  />
             <span style=" color: rgba(0,0,0,0.87);">全选</span>
           </label>
            </th>
@@ -116,8 +114,8 @@
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
+        <tbody id="tbody">
+         <!--  <tr>
             <td><label>
             <input type="checkbox" />
             <span></span>
@@ -126,7 +124,7 @@
             <td>12312341234</td>
             <td>是</td>
             <td><a href="#modal4" style="color: #5d4673" class="modal-trigger">编辑</a></td>
-          </tr>
+          </tr> -->
          
         
         </tbody>
@@ -244,14 +242,14 @@
         </div>
           <div class="modal1-content content2">
           
-            <h3  style="text-align: center;">新增单个学生信息</h3>
+            <h3  style="text-align: center;">新增多个学生信息</h3>
             <p>请按下列模板形式正确导入EXCEL文件，每次可导入一个或者多个班的信息</p>
              
               <div style="float: right;">
                <button id="" class="btn waves-effect waves-light ">模板下载</button>
                <button id="" class="btn waves-effect waves-light ">文件上传</button>
               </div>
-               <img class="responsive-img" src="../images/ban3.jpg">
+               <img class="responsive-img" src="../images/ban5.png">
             <div style="text-align: center;">
               <p>
                 <button id="" class="btn waves-effect waves-light modal-close">确定</button>
@@ -278,29 +276,29 @@
             <div style="text-align: center;">
                <!--  <label for="">导出项 :</label> -->
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" id="all2" />
                 <span>全选</span>
               </label>
                 <label>
-                <input type="checkbox" />
-                <span>学院</span>
+                <input type="checkbox" name="one"/>
+                <span class="two">学院</span>
               </label>
                 <label>
-                <input type="checkbox" />
-                <span>班级</span>
+                <input type="checkbox"  name="one" />
+                <span class="two">班级</span>
               </label>
                 <label>
-                <input type="checkbox" />
-                <span>姓名</span>
+                <input type="checkbox" name="one" />
+                <span class="two">姓名</span>
               </label>
                 <label>
-                <input type="checkbox" />
-                <span>学号</span>
+                <input type="checkbox" name="one" />
+                <span class="two">学号</span>
               </label>
             </div>
             <div style="text-align: center;">
               <p>
-                <button id="" class="btn waves-effect waves-light modal-close">确定</button>
+                <button id="sureexport" class="btn waves-effect waves-light modal-close">确定</button>
                 <button class="btn waves-effect waves-light modal-close">取消</button>
               </p>
             </div>

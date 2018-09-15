@@ -83,7 +83,7 @@
 
         <div class="row">
          <div class="input-field col s6">
-          <input placeholder="2018学年~2019学年" id="first_name" type="text">
+          <input placeholder="2018~2019" id="first_name" type="text">
           <label for="first_name">时间</label>
           <select>
             <option value="1">第一学期</option>
@@ -129,7 +129,7 @@
 
     <div class="col s7 Right">
         <div class="input-field col s6">
-          <select>
+          <select id="select">
             <option value="2">班级</option>
             <option value="1">姓名</option>
             <option value="3">学号</option>
@@ -137,11 +137,11 @@
         </div>
 
         <div class="input-field col s6">
-          <i class="material-icons prefix search">search</i>
+          <i class="material-icons prefix search" id="search">search</i>
           <input id="icon_prefix" type="text" class="validate">
         </div>
 
-        <div class="col s6 left">
+<!--         <div class="col s6 left">
       
          <ul class="collapsible">
           <li>
@@ -172,7 +172,29 @@
           <li class="collection-item"><div>天线<a href="#!" class="secondary-content"><i class="material-icons">remove</i></a></div></li>
           <li class="collection-item"><div>天线 <a href="#!" class="secondary-content"><i class="material-icons">remove</i></a></div></li>
           </ul> 
-        </div>
+        </div> -->
+<!-- 以上是原来的qq模型 -->
+
+  <div>
+      <table class="">
+        <thead>
+          <tr>
+            <th>
+           <label>
+            <input type="checkbox" />
+            <span style=" color: rgba(0,0,0,0.87);">全选</span>
+          </label>
+           </th>
+            
+            <th>学号</th>
+            <th>姓名</th>
+          </tr>
+        </thead>
+
+        <tbody id="tbody">
+          
+        </tbody>
+      </table> </div>
      </div>
 
     </div>
@@ -235,6 +257,7 @@
 <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../js/materialize.js"></script>
 <script type="text/javascript" src="../js/init.js"></script>
+<script type="text/javascript" src="../js/ScoreIndex.js"></script>
 
 </body>
 </html>

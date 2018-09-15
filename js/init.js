@@ -20,6 +20,7 @@
   	    });
   	     $('.tap-target').tapTarget({});
          $('select').formSelect();
+        
           $('.fixed-action-btn').floatingActionButton({
               direction: 'left'
             

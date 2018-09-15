@@ -60,17 +60,18 @@ var Path = "http://47.101.33.66:8000/studentsys";
 
             },
             success: function(data) {
-                
+                console.log(data.code);
+               if (data.code==0){
+                window.location.href =  "./main.html";
+              /*  window.event.returnValue=false;*/
+               }
+
+              
             },
         });
 
    /*  window.location.href =  "./main.html";
      window.event.returnValue=false;*/
   });
-
-
-
-
-
 
 });
